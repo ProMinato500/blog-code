@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Image from 'next/image'
 import Script from 'next/script'
 import styles from '../styles/Home.module.css'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -17,38 +18,55 @@ export default function Home() {
       {/* </Script> */}
       <nav className={styles.mainnav}>
         <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Blog</li>
-          <li>Contact</li>
+          <Link href="/">
+            <a><li>Home</li></a>
+          </Link>
+          <Link href="/about">
+            <a><li>About</li></a>
+          </Link>
+          <Link href="/blog">
+          <a><li>Blog</li></a></Link>
+          <Link href="/contact">
+          <a><li>Contact</li></a></Link>
         </ul>
       </nav>
 
       <main className={styles.main}>
-        <h1 className={styles.title}>
-          BlogCode
-        </h1>
+        <h1 className={styles.title}>BlogCode</h1>
 
-        <p className={styles.description}>
-          Blogs for Coders by a coder
-        </p>
+        <p className={styles.description}>Blogs for Coders by a coder</p>
         <div className="blogs">
           <h2>Popular Blogs</h2>
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima omnis accusantium qui reiciendis esse, libero sunt ab ipsam atque dolor repellat praesentium placeat neque eius optio quisquam quam maxime dolores id! Odit, dolorum maiores!</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+              omnis accusantium qui reiciendis esse, libero sunt ab ipsam atque
+              dolor repellat praesentium placeat neque eius optio quisquam quam
+              maxime dolores id! Odit, dolorum maiores!
+            </p>
           </div>
         </div>
         <div className="blogs">
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima omnis accusantium qui reiciendis esse, libero sunt ab ipsam atque dolor repellat praesentium placeat neque eius optio quisquam quam maxime dolores id! Odit, dolorum maiores!</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+              omnis accusantium qui reiciendis esse, libero sunt ab ipsam atque
+              dolor repellat praesentium placeat neque eius optio quisquam quam
+              maxime dolores id! Odit, dolorum maiores!
+            </p>
           </div>
         </div>
         <div className="blogs">
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022</h3>
-            <p>Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima omnis accusantium qui reiciendis esse, libero sunt ab ipsam atque dolor repellat praesentium placeat neque eius optio quisquam quam maxime dolores id! Odit, dolorum maiores!</p>
+            <p>
+              Lorem, ipsum dolor sit amet consectetur adipisicing elit. Minima
+              omnis accusantium qui reiciendis esse, libero sunt ab ipsam atque
+              dolor repellat praesentium placeat neque eius optio quisquam quam
+              maxime dolores id! Odit, dolorum maiores!
+            </p>
           </div>
         </div>
       </main>
@@ -59,12 +77,12 @@ export default function Home() {
           target="_blank"
           rel="noopener noreferrer"
         >
-          Powered by{' '}
+          Powered by{" "}
           <span className={styles.logo}>
             <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
           </span>
         </a>
       </footer>
     </div>
-  )
+  );
 }
