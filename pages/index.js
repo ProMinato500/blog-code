@@ -1,18 +1,17 @@
 import Head from 'next/head'
 import Image from 'next/image'
-import Script from 'next/script'
 import styles from '../styles/Home.module.css'
-import Link from 'next/link'
-import Dummy from './components/dummy'
 
 export default function Home() {
   return (
     <div className={styles.container}>
-      <Dummy/>
       <style jsx>
         {`
-          .mySpan {
-            color:red;
+          h2{
+            font-size: 38px;
+          }
+          h3{
+            font-size: 28px
           }
         `}
       </style>
@@ -25,27 +24,18 @@ export default function Home() {
       </Head>
       {/* <Script src='/sc.js' strategy='lazyOnload'> */}
       {/* </Script> */}
-      <nav className={styles.mainnav}>
-        <ul>
-          <Link href="/">
-            <a><li>Home</li></a>
-          </Link>
-          <Link href="/about">
-            <a><li>About</li></a>
-          </Link>
-          <Link href="/blog">
-          <a><li>Blog</li></a></Link>
-          <Link href="/contact">
-          <a><li>Contact</li></a></Link>
-        </ul>
-      </nav>
+      
 
       <main className={styles.main}>
-        <h1 className={styles.title}> <span className='mySpan'>BlogCode</span></h1>
+        <h1 className={styles.title}> <span className=''>BlogCode</span></h1>
+        <div className={styles.imageWrap}>
+        <Image className={styles.myImg} src='/home-img.jpg' alt='' width={237} height={158}/>
+        </div>
+
 
         <p className={styles.description}>Blogs for Coders by a coder</p>
         <div className="blogs">
-          <h2>Popular Blogs</h2>
+          <h2>Latest Blogs</h2>
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022</h3>
             <p>
@@ -55,8 +45,6 @@ export default function Home() {
               maxime dolores id! Odit, dolorum maiores!
             </p>
           </div>
-        </div>
-        <div className="blogs">
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022</h3>
             <p>
@@ -66,8 +54,6 @@ export default function Home() {
               maxime dolores id! Odit, dolorum maiores!
             </p>
           </div>
-        </div>
-        <div className="blogs">
           <div className="blogItem">
             <h3>How to learn JavaScript in 2022</h3>
             <p>
@@ -80,18 +66,7 @@ export default function Home() {
         </div>
       </main>
 
-      <footer className={styles.footer}>
-        <a
-          href="https://vercel.com?utm_source=create-next-app&utm_medium=default-template&utm_campaign=create-next-app"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Powered by{" "}
-          <span className={styles.logo}>
-            <Image src="/vercel.svg" alt="Vercel Logo" width={72} height={16} />
-          </span>
-        </a>
-      </footer>
+      
     </div>
   );
 }
